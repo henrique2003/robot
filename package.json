@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node src/index.js",
+    "dev": "nodemon src/index.js --trace-warnings --unhandled-rejections=strict",
     "start": "node src/index.js"
   },
   "author": "Fitred Name",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "13.1.0"
+    "discord.js": "^12.5.1"
   },
   "devDependencies": {
-    "git-commit-msg-linter": "3.2.8"
+    "git-commit-msg-linter": "3.2.8",
+    "nodemon": "^2.0.13"
   }
 }
