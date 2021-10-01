@@ -1,0 +1,19 @@
+{
+  "name": "bot-discord",
+  "version": "1.0.0",
+  "description": "bot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Fitred Name",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "13.1.0"
+  },
+  "devDependencies": {
+    "git-commit-msg-linter": "3.2.8"
+  }
+}
