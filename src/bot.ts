@@ -37,7 +37,27 @@ class Bot {
 
       // stop
       music.stop(message)
+
+      // skip
+      music.skip(message)
+
+      // queue
+      music.queue(message)
     })
+
+    // this.bot.on('voiceStateUpdate', ({ client, channel, member }, newState) => {
+    //   const dmChannel = new DMChannel(client)
+
+    //   const message = new Message(client, {
+    //     id: '857852114843729923',
+    //     type: 'text'
+    //   }, dmChannel)
+
+    //   if (channel === null && newState.channel !== null) {
+    //     console.log('Entrou')
+    //     message.channel.send(member.nickname)
+    //   }
+    // })
 
     // logs
     this.ytsearch.logs()

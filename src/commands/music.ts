@@ -18,9 +18,23 @@ export default class Music {
   }
 
   stop (message: Message): void {
-    const playCode: string = `${mainFlag}stop `
+    const playCode: string = `${mainFlag}stop`
     if (message.content.includes(playCode)) {
       this.ytsearch.stop(message)
+    }
+  }
+
+  skip (message: Message): void {
+    const playCode: string = `${mainFlag}skip`
+    if (message.content.includes(playCode)) {
+      this.ytsearch.skip(message)
+    }
+  }
+
+  queue (message: Message): void {
+    const playCode: string = `${mainFlag}queue`
+    if (message.content.includes(playCode)) {
+      this.ytsearch.queue(message)
     }
   }
 }

@@ -20,6 +20,17 @@ export class YtSeacrh {
     this.distube.stop(message)
   }
 
+  async skip (message: Message): Promise<void> {
+    this.distube.skip(message)
+  }
+
+  async queue (message: Message): Promise<void> {
+    const queue = this.distube.getQueue(message)
+    message.channel.send('Fila atual:\n' + queue.songs.map((song, id) =>
+            `**${id + 1}**. ${song.name} - \`${song.formattedDuration}\``
+    ).slice(0, 10).join('\n'))
+  }
+
   logs (): void {
     this.distube.on('searchResult', (message: Message, result) => {
       let i = 0
